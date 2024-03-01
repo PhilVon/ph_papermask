@@ -1,4 +1,4 @@
-![logo](logo.png)
+![logo](logo.png)  
 ph_papermask (https://github.com/PhilVon/ph_papermask)
 -----------------
 
