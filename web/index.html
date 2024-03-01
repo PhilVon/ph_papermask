@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+/**
+* HTML document structure and content for the paper mask web app.
+*
+* Contains the HTML doctype, html, head, and body elements.
+*
+* The head includes meta tags, stylesheets, and scripts.
+*
+* The body contains:
+* - A modal overlay for the mask menu.
+* - Mask images with click handlers to set the mask.
+* - Buttons to modify or cancel the mask.
+* - A background image overlay.
+* - Custom script.
+*/
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/custom.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="modal-overlay" id="maskMenu" onclick="event.stopPropagation();">
+        <div class="modal">
+            <div class="modal-content">
+                <div class="images-container">
+                    <img src="./images/1.png" onclick="setImage(1)" />
+                    <img src="./images/2.png" onclick="setImage(2)" />
+                    <img src="./images/3.png" onclick="setImage(3)" />
+                    <img src="./images/4.png" onclick="setImage(4)" />
+                    <img src="./images/5.png" onclick="setImage(5)" />
+                    <img src="./images/6.png" onclick="setImage(6)" />
+                    <img src="./images/8.png" onclick="setImage(8)" />
+                    <img src="./images/9.png" onclick="setImage(9)" />
+                    <img src="./images/10.png" onclick="setImage(10)" />
+                    <img src="./images/11.png" onclick="setImage(11)" />
+                    <img src="./images/12.png" onclick="setImage(12)" />
+                    <img src="./images/13.png" onclick="setImage(13)" />
+                    <img src="./images/14.png" onclick="setImage(14)" />
+                    <img src="./images/15.png" onclick="setImage(15)" />
+                    <img src="./images/16.png" onclick="setImage(16)" />
+                    <img src="./images/17.png" onclick="setImage(17)" />
+                    <img src="./images/18.png" onclick="setImage(18)" />
+                    <img src="./images/19.png" onclick="setImage(19)" />
+                    <img src="./images/20.png" onclick="setImage(20)" />
+                    <img src="./images/21.png" onclick="setImage(21)" />
+                    <img src="./images/22.png" onclick="setImage(22)" />
+                    <img src="./images/23.png" onclick="setImage(23)" />
+                    <img src="./images/24.png" onclick="setImage(24)" />
+                    <img src="./images/25.png" onclick="setImage(25)" />
+                </div>
+                <div class="buttons-container">
+                    <button id="modify" disabled>Modify</button>
+                    <button id="close">Cancel</button>
+                </div>
+            </div>
+            <div class="overlay-image" style="background-image: url('./images/overlay.png');"></div>
+        </div>
+    </div>
+    <script src="./script/custom.js"></script>
+</body>
+
+</html>

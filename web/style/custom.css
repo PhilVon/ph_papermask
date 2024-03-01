@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* background-color: #111;  Dark background for GTA5 theme */
+}
+
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: relative;
+    width: 300px;  /* Adjust size accordingly */
+    height: 500px;  /* Adjust size accordingly */
+    background: #2c3e50; /* Dark blue color for modal background */
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
+    overflow: hidden; /* Keeps everything contained within the modal */
+    border: 2px solid black;
+}
+
+.modal-content {
+    display: flex;
+}
+
+.images-container {
+    padding: 10px;
+    width: 200px; /* Take up 70% of the modal width */
+    height: 480px;
+    overflow-y: auto; /* Enables scrolling if the content overflows */
+    background: #34495e; /* Slightly lighter shade for contrast */
+}
+
+/* Style the scrollbar for images-container */
+.images-container::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+}
+
+.images-container::-webkit-scrollbar-track {
+    background: #1a252f; /* Dark background of the scrollbar track */
+}
+
+.images-container::-webkit-scrollbar-thumb {
+    background: #253444; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Optional: Round the corners of the scrollbar thumb */
+}
+
+.images-container::-webkit-scrollbar-thumb:hover {
+    background: #324558; /* Slightly lighter color for thumb on hover */
+}
+
+.images-container img {
+    width: 100%; /* Scale images to fit container width */
+    margin-bottom: 10px; /* Spacing between images */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    width: 100px; /* Remainder of the modal width */
+    padding: 10px;
+    background: #2c3e50; /* Same as modal background */
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    margin: 5px; /* Spacing between buttons */
+    color: white; /* Text color */
+    background-color: #2980b9; /* Blue color for buttons */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; /* Aesthetic choice for button text */
+}
+
+.buttons-container button:hover {
+    background-color: #3498db; /* Lighter blue color on hover */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 290px;
+    left: 120px;
+    right: 0;
+    bottom: 0;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Allows clicking through the overlay image */
+}
