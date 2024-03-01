@@ -3,7 +3,7 @@ game        'gta5'
 lua54       'yes'
 
 author      'Phil'
-description 'allows players to convert paperbag's to player masks and wear them.'
+description 'allows players to convert paperbags to player masks and wear them.'
 
 ui_page 'web/index.html'
 
