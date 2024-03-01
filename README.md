@@ -43,5 +43,6 @@ Usage
 Roadmap
 -----------------
 - add config file
+- add animations
 - implement requirement for a marker pen in inventory to convert mask
 - add a default notification system for messages to player
