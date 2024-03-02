@@ -1,8 +1,5 @@
-![logo](logo.png)  
-ph_papermask (https://github.com/PhilVon/ph_papermask)
+ph_papermask v1.1
 -----------------
-Preview:  
-[![Video Preview](https://img.youtube.com/vi/DXTY8z4kkwI/0.jpg)](https://www.youtube.com/watch?v=DXTY8z4kkwI)
 
 Overview
 -----------------
@@ -40,9 +37,21 @@ Usage
 - in your inventory screen right click a paper bag and select 'modify' to open the convert mask UI
 - In inventory use a mask to wear it, use again to remove the mask
 
+known issue
+-----------------
+- if a player logs out while wearing a mask, when they log back in they wont have mask on but wont be able to drop the mask until they wear it and remove it again.
+(the above issue will likely remain unfixed as it would require hooking into what ever clothing script you use to save skins, you can easily add the call yourself in the server.lua)
+
 Roadmap
 -----------------
 - add config file
-- add animations
 - implement requirement for a marker pen in inventory to convert mask
 - add a default notification system for messages to player
+
+Changelog 
+-----------------
+v1.1 (02/03/2024)
+-----------------
+- Made it so you can remove mask item from inventory while worn
+- modified code to use ox_inventory hooks to make it a bit cleaner
+- force close inventory while modifying to avoid a glitch, if you had just opened the paperbag storage you would still have access to that inventory after modifying

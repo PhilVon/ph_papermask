@@ -41,6 +41,8 @@ exports('convert', function(slot)
     setTexture = nil
     -- show mask selection
     setDisplay(true)
+    -- close player inventory
+    exports.ox_inventory:closeInventory()
     -- wait till texture is selected
     Wait(500)
     while display do
