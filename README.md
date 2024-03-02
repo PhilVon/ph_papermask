@@ -52,6 +52,6 @@ Changelog
 -----------------
 v1.1 (02/03/2024)
 -----------------
-- Made it so you can remove mask item from inventory while worn
+- Made it so you can't remove mask item from inventory while worn
 - modified code to use ox_inventory hooks to make it a bit cleaner
 - force close inventory while modifying to avoid a glitch, if you had just opened the paperbag storage you would still have access to that inventory after modifying
