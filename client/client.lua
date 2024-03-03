@@ -5,7 +5,17 @@ local display = false
 local function setDisplay(bool)
     display = bool
     SendNUIMessage({
-        display = bool
+        display = bool,
+        colors = {
+            cImgCnt = Config.colorImgContainer,
+            cBtnCnt = Config.colorBtnContainer,
+            cBtnTxt = Config.colorBtnText,
+            cBtnBg = Config.colorBtn,
+            cBtnHvr = Config.colorbtnHover,
+            cScrTrk = Config.colorScrollTrack,
+            cScrThm = Config.colorScrollThumb,
+            cScrThmHvr = Config.colorScrollThumbHover
+        }
     })
     SetNuiFocus(
         bool,
@@ -38,22 +48,27 @@ end)
  * @param {number} slot - Inventory slot number of paper bag to convert.
 */
 exports('convert', function(slot)
+    local pencount = exports.ox_inventory:Search('count', Config.penItem)
     setTexture = nil
-    -- show mask selection
-    setDisplay(true)
-    -- close player inventory
-    exports.ox_inventory:closeInventory()
-    -- wait till texture is selected
-    Wait(500)
-    while display do
+    if not Config.penNeeded or pencount > 0 then
+        -- show mask selection
+        setDisplay(true)
+        -- close player inventory
+        exports.ox_inventory:closeInventory()
+        -- wait till texture is selected
         Wait(500)
-    end
-    -- make sure a texture was selected then call the server event to convert
-    if setTexture ~= nil then
-        TriggerServerEvent('ph_papermask:convert', slot, setTexture)
+        while display do
+            Wait(500)
+        end
+        -- make sure a texture was selected then call the server event to convert
+        if setTexture ~= nil then
+            TriggerServerEvent('ph_papermask:convert', slot, setTexture)
+        else
+            -- let the player know something went wrong
+            print('no texture selected!')
+        end
     else
-        -- let the player no something went wrong
-        print('no texture selected!')
+        print('Pen needed!')
     end
 end)
 
@@ -66,7 +81,7 @@ exports('putonmmask', function(slot)
     local playerPed = PlayerPedId()
     local current = GetPedDrawableVariation(playerPed, 1)
     local texture = GetPedTextureVariation(playerPed, 1)
-    slotid = slot.slot
+    local slotid = slot.slot
     -- call server event to wear/remove mask
     TriggerServerEvent('ph_papermask:wear', slotid, current, texture)
 end)

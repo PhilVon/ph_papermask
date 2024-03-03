@@ -17,20 +17,19 @@ Requirements
 - ox_inventory (https://github.com/overextended/ox_inventory)
 
 - [recommended] Clothes as item - 24k Drawn icons OF MP ped (https://forum.cfx.re/t/clothes-as-item-24k-drawn-icons-of-mp-ped/5183496)
-    Or any other icons for the paper masks as none are provided
+    Or any other icons (some have been provided Thanks to [AdvancedTeam](https://forum.cfx.re/u/AdvancedTeam))
 
 Installation
 -----------------
 - Download the latest version of ph_papermask
 - Place the ph_papermask directory in your resources directory
 - Add ensure ph_papermask to your server.cfg file
-- Add your chosen mask icon images to ox_inventory/web/images/ named as papermask#.png and to ph_papermask/web/images/ named as #.png (# is the texture id for the mask variation)
+- copy all images from INSTALL/images to your ox_inventory/web/images directory
 - Add the items from INSTALL/items.lua to your ox_inventory/data/items.lua file
 
 Configuration
 -----------------
-No Config file implemented yet, but you can change the code to suit your needs.
-To implement notifications just replace the print() in code with calls to your notification system.
+For configuration options read and edit the config.lua to your liking
 
 Usage
 -----------------
@@ -39,16 +38,24 @@ Usage
 
 known issue
 -----------------
-- if a player logs out while wearing a mask, when they log back in they wont have mask on but wont be able to drop the mask until they wear it and remove it again.
+- if a player logs out while wearing a mask, when they log back in they wont have the mask on but wont be able to drop the mask until they wear it and remove it again.
 (the above issue will likely remain unfixed as it would require hooking into what ever clothing script you use to save skins, you can easily add the call yourself in the server.lua)
 
 Roadmap
 -----------------
-- add config file
-- implement requirement for a marker pen in inventory to convert mask
-- add a default notification system for messages to player
+- ~~add config file~~
+- ~~implement requirement for a marker pen in inventory to convert mask~~
+- add a default notification system for messages to player (leaning toward using ox_lib)
 
 Changelog 
+-----------------
+v2.0 (03/03/2024)
+-----------------
+- Added inventory images for mask variations and marker pen
+- Added Marker pen requirement
+- Added config file
+- Added options to modify colours of UI within the config.lua (standard RGB also the ability to set alpha transparency)
+
 -----------------
 v1.1 (02/03/2024)
 -----------------

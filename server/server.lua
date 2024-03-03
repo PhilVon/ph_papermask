@@ -26,7 +26,7 @@ RegisterNetEvent('ph_papermask:convert', function(slot, setTexture)
     -- this will only be called by a paperbag so a container can be assumed
     local container = item.metadata.container
     local containeritems = exports.ox_inventory:GetInventoryItems(container)
-    local image = "papermask"
+    local image = Config.imagePrefix
     textureid = setTexture
 
     -- register a hook to set the metadata

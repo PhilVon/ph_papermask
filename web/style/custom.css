@@ -2,7 +2,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* background-color: #111;  Dark background for GTA5 theme */
 }
 
 .modal-overlay {
@@ -20,7 +19,6 @@ body, html {
     position: relative;
     width: 300px;  /* Adjust size accordingly */
     height: 500px;  /* Adjust size accordingly */
-    background: #2c3e50; /* Dark blue color for modal background */
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
     overflow: hidden; /* Keeps everything contained within the modal */
@@ -36,7 +34,7 @@ body, html {
     width: 200px; /* Take up 70% of the modal width */
     height: 480px;
     overflow-y: auto; /* Enables scrolling if the content overflows */
-    background: #34495e; /* Slightly lighter shade for contrast */
+    background: #34495e; /* Slightly lighter shade for contrast  [Modify colors in config.lua!!!]*/
 }
 
 /* Style the scrollbar for images-container */
@@ -45,16 +43,16 @@ body, html {
 }
 
 .images-container::-webkit-scrollbar-track {
-    background: #1a252f; /* Dark background of the scrollbar track */
+    background: #1a252f; /* Dark background of the scrollbar track [Modify colors in config.lua!!!]*/
 }
 
 .images-container::-webkit-scrollbar-thumb {
-    background: #253444; /* Color of the scrollbar thumb */
+    background: #253444; /* Color of the scrollbar thumb [Modify colors in config.lua!!!]*/
     border-radius: 5px; /* Optional: Round the corners of the scrollbar thumb */
 }
 
 .images-container::-webkit-scrollbar-thumb:hover {
-    background: #324558; /* Slightly lighter color for thumb on hover */
+    background: #324558; /* Slightly lighter color for thumb on hover [Modify colors in config.lua!!!]*/
 }
 
 .images-container img {
@@ -70,14 +68,14 @@ body, html {
     align-items: center;
     width: 100px; /* Remainder of the modal width */
     padding: 10px;
-    background: #2c3e50; /* Same as modal background */
+    background: #2c3e50; /* Same as modal background [Modify colors in config.lua!!!]*/
 }
 
 .buttons-container button {
     padding: 10px 20px;
     margin: 5px; /* Spacing between buttons */
-    color: white; /* Text color */
-    background-color: #2980b9; /* Blue color for buttons */
+    color: white; /* Text color [Modify colors in config.lua!!!]*/
+    background-color: #2980b9; /* Blue color for buttons [Modify colors in config.lua!!!]*/
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -87,7 +85,7 @@ body, html {
 }
 
 .buttons-container button:hover {
-    background-color: #3498db; /* Lighter blue color on hover */
+    background-color: #3498db; /* Lighter blue color on hover [Modify colors in config.lua!!!]*/
 }
 
 .overlay-image {
