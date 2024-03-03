@@ -46,6 +46,7 @@ Roadmap
 - ~~add config file~~
 - ~~implement requirement for a marker pen in inventory to convert mask~~
 - add a default notification system for messages to player (leaning toward using ox_lib)
+- add animations
 
 Changelog 
 -----------------
