@@ -1,4 +1,4 @@
-ph_papermask v1.1
+ph_papermask v2.0
 -----------------
 
 Overview
