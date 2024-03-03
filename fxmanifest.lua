@@ -7,6 +7,9 @@ description 'allows players to convert paperbags to player masks and wear them.'
 
 ui_page 'web/index.html'
 
+shared_scripts {
+    'config.lua'
+}
 client_scripts {
     'client/client.lua'
 }
