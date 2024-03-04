@@ -77,13 +77,29 @@ end)
  * 
  * @param {object} slot - Object containing slot number of mask item. 
 */
-exports('putonmmask', function(slot)
+exports('putonmmask', function(data, slot)
     local playerPed = PlayerPedId()
     local current = GetPedDrawableVariation(playerPed, 1)
     local texture = GetPedTextureVariation(playerPed, 1)
-    local slotid = slot.slot
-    -- call server event to wear/remove mask
-    TriggerServerEvent('ph_papermask:wear', slotid, current, texture)
+    local itemtexture = slot.metadata.maskskin
+    -- check if player is wearing a mask
+    if current == 49 and texture == itemtexture then
+        -- call server event to wear mask
+        exports.ox_inventory:useItem(slot, function(data)
+            if data then
+                TriggerServerEvent('ph_papermask:wear', slot, false)
+            end
+        end)
+    elseif current == 0 then
+        -- call server event to remove mask
+        exports.ox_inventory:useItem(slot, function(data)
+            if data then
+                TriggerServerEvent('ph_papermask:wear', slot, true)
+            end
+        end)
+    else
+        print('Remove current mask first')
+    end
 end)
 
 

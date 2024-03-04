@@ -48,7 +48,6 @@ var selectedImage = null;
                         $.post(`https://${GetParentResourceName()}/setTexture`, JSON.stringify({
                             texture: selectedImage
                         }));
-                        console.log("Modified image: " + selectedImage);
                         return
                     }
                     else {
