@@ -46,9 +46,17 @@ Roadmap
 - ~~add config file~~
 - ~~implement requirement for a marker pen in inventory to convert mask~~
 - add a default notification system for messages to player (leaning toward using ox_lib)
-- add animations
+- add Animations
 
-Changelog 
+Changelog
+-----------------
+v2.1 (03/03/2024)
+-----------------
+- Fixed error with code and how i was implementing ox_inventory
+- change to code to stop adding and removing a hook everytime a paperbag is modified
+- changes made to items to be added to 'ox_inventory/data/items.lua'
+- Wearing the mask now has an animation
+
 -----------------
 v2.0 (03/03/2024)
 -----------------
